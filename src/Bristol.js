@@ -401,7 +401,7 @@ class Bristol extends events.EventEmitter {
     if (typeof formatter === 'string') {
       return require('./formatters/' + formatter)
     }
-    return null
+    return formatter
   }
 }
 
