@@ -391,6 +391,18 @@ class Bristol extends events.EventEmitter {
     }
     target.formatter = formatter.bind(formatter, options || {})
   }
+
+  /**
+   * Returns the formatter function from the corresponding module.
+   *
+   * @param {function|string} formatter A formatter function or name
+   */
+  static getFormatter (formatter) {
+    if (typeof formatter === 'string') {
+      return require('./formatters/' + formatter)
+    }
+    return formatter
+  }
 }
 
 module.exports = new Bristol()
