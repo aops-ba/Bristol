@@ -394,6 +394,8 @@ class Bristol extends events.EventEmitter {
 
   /**
    * Returns the formatter function from the corresponding module.
+   *
+   * @param {function|string} formatter A formatter function or name
    */
   static getFormatter (formatter) {
     if (typeof formatter === 'string') {
